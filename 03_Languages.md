@@ -52,4 +52,14 @@ Vous avez compris assez vite cette grammaire. Les instructions permettent de fai
 var quantiteTomate = 5;
 ```
 
-var est un diminutif de variable. quantiteTomate est le nom de cette variable. 
+var est un diminutif de variable. quantiteTomate est le nom de cette variable. Ici la gestion de l'emplacement mémoire est masqué et automatique, tu n'as pas à t'en soucier.
+
+Le nom de la variable ne peut pas contenir d'espace mais peut contenir majuscules, minuscules, tiret bas, chiffre mais pas en premier caractère.
+
+Enfin le point-virgule est un séparateur d'instruction. Tu peux donc mettre plusieurs instructions sur la même ligne.
+
+Le séparateur décimal est le point.
+
+```
+var prix_HT = 4.5; var TVA = 5.5;
+```
