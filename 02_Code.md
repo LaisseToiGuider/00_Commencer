@@ -10,12 +10,22 @@ Un ordinateur est constitué au minimum de 3 éléments
 
 Ce n'est pas plus compliqué que cela.
 
-## Dans quelle langue puis-je parler à l'ordinateur ?
+## Les bons termes à connaître
 
-Je te rappelle que l'ordinateur ne connaît que les Zéro et les Un. On appelle cela des bits.
+L'ordinateur ne connaît que les Zéro et les Un. On appelle cela des bits.
 
 Comme tu as dû voir dans la vidéo "C'est pas sorcier" on regroupe les bits par 8 cela donne des octets.
 
+La mémoire de travail, celle où sont effectués les calculs, s'appelle le registre.
+
+La mémoire de stockage s'appelle la RAM (Random Access Memory) et elle s'efface dès qu'elle n'a plus de courant.
+
+Le microprocesseur à besoin de tout cela pour réussir à exécuter des instructions.
 
 
+## Comment programmer un ordinateur ?
+
+Celui qui met au point le microprocesseur
+
+![intel4004](https://user-images.githubusercontent.com/107787061/174473419-284fa517-e6ce-495b-880d-64bbc5419694.jpeg)
 
