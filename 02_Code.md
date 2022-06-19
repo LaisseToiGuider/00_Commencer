@@ -30,7 +30,7 @@ Celui qui met au point le microprocesseur décide des instructions.
 ![intel4004](https://user-images.githubusercontent.com/107787061/174473419-284fa517-e6ce-495b-880d-64bbc5419694.jpeg)
 
 
-Par exemple il va dire le code 00000001 veut dire additionner registre A + registre B et mettre la réponse dans le registre C.
+Par exemple il va décider que le code 00000001 veut dire additionner registre A + registre B et mettre la réponse dans le registre C.
 
 Comme tu le vois c'est assez compliqué de travailler en binaire et travailler avec les registres.
 
@@ -73,6 +73,6 @@ L'interpréteur va analyser le texte et le transformer en instructions binaires,
 
 ## Si tu veux voir à quoi ressemble le code assembleur
 
-Réservé aux grands curieux, tu peux voir à quoi ressemble le code assembleur [sur ce site](https://sharplab.io/)
+Réservé aux grands curieux, tu peux voir à quoi ressemble le code assembleur [sur ce site.](https://sharplab.io/)
 ![2022-06-19 15_25_23-SharpLab](https://user-images.githubusercontent.com/107787061/174483335-daed28f1-65d0-4f11-8504-3a190ca3b685.png)
 
