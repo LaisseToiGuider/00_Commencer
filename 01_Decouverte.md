@@ -2,7 +2,7 @@
 
 Avant de commencer à coder il faut comprendre comment fonctionne un ordinateur.
 
-Cette vidéo de 30 minutes est très bien faite. Elle est un peu vielle mais est très bien faite et aborde pas mal de sujets.
+Cette vidéo de 30 minutes est très bien faite. Elle est un peu vielle mais est très facile à comprendre.
 
 L'occasion de demander à tes parents si ils ont connu les disquettes.
 
