@@ -14,7 +14,7 @@ Ce n'est pas plus compliqué que cela.
 
 L'ordinateur ne connaît que les Zéro et les Un. On appelle cela des bits.
 
-Comme tu as dû voir dans la vidéo "C'est pas sorcier" on regroupe les bits par 8 cela donne des octets.
+Comme tu as dû voir dans la vidéo "C'est pas sorcier" on regroupe les bits par 8 cela donne des octets. Ce sont des valeurs binaires.
 
 La mémoire de travail, celle où sont effectués les calculs, s'appelle le registre.
 
@@ -25,7 +25,30 @@ Le microprocesseur à besoin de tout cela pour réussir à exécuter des instruc
 
 ## Comment programmer un ordinateur ?
 
-Celui qui met au point le microprocesseur
+Celui qui met au point le microprocesseur décide des instructions.
 
 ![intel4004](https://user-images.githubusercontent.com/107787061/174473419-284fa517-e6ce-495b-880d-64bbc5419694.jpeg)
 
+
+Par exemple il va dire le code 00000001 veut dire additioner registre A + registre B et mettre la réponse dans le registre C.
+
+Comme tu le vois c'est assez compliqué de travailler en binaire et travailler avec les registrer.
+
+Rassure toi, on a inventé des langues et des grammaires bien plus simple.
+
+## Premier exemple
+
+```
+1  var prix = 5;
+2  var quantite = 6;
+3  var valeur = prix * quantite;
+4  Console.WriteLine(valeur);
+```
+
+Ligne 1 on indique que l'on va utiliser un espace mémoire appelé "prix" pour y stocker la valeur 5.
+
+Ligne 2 on indique que l'on va utiliser un autre espace mémoire appelé "quantité" (sans accents) pour y stocker la valeur 6.
+
+Ligne 3 on indique que l'on va utiliser un autre espace mémoire appelé "valeur". On utilise les capacités de calcul de microprocesseur pour multiplier prix par quantité et stocker le résultat dans l'espace mémoire "valeur".
+
+Ligne 4 on utilise une fonction pour afficher à l'écran ce que contient "valeur".
