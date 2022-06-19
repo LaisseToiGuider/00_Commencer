@@ -1,6 +1,4 @@
-
-
-#Découverte
+## Découverte
 
 Avant de commencer à coder il faut comprendre comment fonctionne un ordinateur.
 
