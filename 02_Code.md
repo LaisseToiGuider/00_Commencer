@@ -52,3 +52,15 @@ Ligne 2 on indique que l'on va utiliser un autre espace mémoire appelé "quanti
 Ligne 3 on indique que l'on va utiliser un autre espace mémoire appelé "valeur". On utilise les capacités de calcul de microprocesseur pour multiplier prix par quantité et stocker le résultat dans l'espace mémoire "valeur".
 
 Ligne 4 on utilise une fonction pour afficher à l'écran ce que contient "valeur".
+
+## A toi de jouer
+
+![02_cap1](https://user-images.githubusercontent.com/107787061/174474388-bb6a4e4f-6881-44c4-88cd-ffa92c469453.png)
+
+[Va sur ce lien](https://dotnetfiddle.net/YRT6wD), tu vas retrouver cet exemple.
+
+Appuie sur le bouton "Run" tout en haut pour demander à démarrer le programme.
+
+Tu dois voir la réponse 30
+
+Change la quantité pour mettre 7 puis "Run". Obtiens-tu 35 ?
