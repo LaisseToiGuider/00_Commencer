@@ -38,7 +38,3 @@ Nous utiliserons des outils en anglais mais cela restera de l’anglais simple, 
 ## Es-tu prêt à commencer ?
 
 [Tout commence ici](01_Decouverte.md)
-
-> Qui est derrière tout ceci ? Un père de famille codeur avec son fils en âge de progresser ainsi que pas mal de jeunes de mon réseau familial et amical.
-
-> Edité avec [StackEdit](https://stackedit.io/).
