@@ -44,7 +44,7 @@ prendre la valeur de la page 2 ligne 10 et ajouter la valeur de page 2 ligne 11,
 afficher "le stock de tomate TTC est valorisé à " puis la valeur de la page 2 ligne 12
 ```
 
-Vous avez compris assez vite cette grammaire. Les instructions permettent de faire le calcul.
+Vous avez compris assez vite cette grammaire. Les instructions permettent de faire le calcul et de l'afficher.
 
 ## Grammaire C#
 
