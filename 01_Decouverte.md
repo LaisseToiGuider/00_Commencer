@@ -20,6 +20,8 @@ Ces portes logiques permettent de faire des calculs.
 
 Tout le reste a été crée par l'homme et tout est une question de convention.
 
+[La suite c'est ici](02_Code.md)
+
 ## Anecdote
 
 Cette vidéo date un peu et l'ordinateur le plus puissant de l'époque (le Cray-1) est dépassé par le smartphone que tu possèdes certainement. Il est même 10 fois plus puissant que le Cray-1 !
