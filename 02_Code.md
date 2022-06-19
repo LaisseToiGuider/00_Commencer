@@ -69,7 +69,7 @@ Change la quantité pour mettre 7 puis "Run". Obtiens-tu 35 ?
 
 L'interpréteur va analyser le texte et le transformer en instructions binaires, aussi appelé en code assembleur. C'est la seule langue que comprend le microprocesseur.
 
-## Prochaine étape : faire des tests.
+## Prochaine étape : les langues.
 
 ## Si tu veux voir à quoi ressemble le code assembleur
 
