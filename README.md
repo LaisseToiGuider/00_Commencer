@@ -16,7 +16,8 @@ Viens rejoindre le Discord des débutants en programmation.
 Chacun son rythme et son niveau. **Ouvert à tous pour tous les âges.**
 
 Avance avec des exercices adaptés à ton niveau.
-Ne reste pas bloqué, trouve de l’aide.
+
+**Ne reste pas bloqué, trouve de l’aide et comment progresser.**
 
 ## De quoi as-tu besoin ?
 D’un ordinateur, cela peut être celui de tes parents et tu peux les rassurer car nous n’allons rien installer dessus.
