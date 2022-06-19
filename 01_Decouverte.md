@@ -14,9 +14,11 @@ Que l'ordinateur fonctionne avec de l'électricité.
 
 Zéro (pas d'électricité) ou Un (le courant passe).
 
-Ensuite tu as 3 portes logiques (ET/OU/NOT) qui permettent de faire tout le reste. Si tu as décroché au moment des portes logiques retourne voir cette partie de la vidéo.
+Ensuite tu as 3 portes logiques (ET/OU/NOT) qui permettent de faire tout le reste. Si tu n'as pas bien suivi au moment des portes logiques retourne voir cette partie de la vidéo.
 
 Ces portes logiques permettent de faire des calculs.
+
+Tout le reste a été crée par l'homme et tout est une question de convention.
 
 ## Anecdote
 
