@@ -8,11 +8,11 @@ Comme tu l'as vu à l'étape précédente, nous avons utilisé une certaine synt
 var prix = 5;
 ```
 
-On appelle application ou app un programme informatique que tu utilises sur ton ordinateur ou smartphone.
+> On appelle application ou app un programme informatique que tu utilises sur ton ordinateur ou smartphone.
 
-Il existe de nombreux langages. Je vais utiliser ici le langage C# qui se prononce 'C-Sharp'. Pourquoi ce choix ? C'est un langage assez universel qui permet de faire tout type d'application : des applications avec des dessins, des pages web, des app Android ou iPhone, des jeux vidéo...
+Il existe de nombreux langages. Je vais t'apprendre à utiliser le langage C# qui se prononce 'C-Sharp'. Pourquoi ce choix ? C'est un langage assez universel qui permet de faire tout type d'application : des applications avec des dessins, des pages web, des app Android ou iPhone, des jeux vidéo...
 
-Les outils avancés pour écrire des applications sont gratuits, la documentation très complète et en français.
+Les outils avancés pour écrire des applications C# sont gratuits, la documentation très complète est en français.
 
 Enfin la communauté francophone est assez importante, une grosse communauté c'est l'assurance de trouver plus facilement une réponse à une question que tu te poses.
 
@@ -33,6 +33,8 @@ Par exemple var signifie réserver de l'espace mémoire.
 ## Exemple de programme sur cahier
 
 Imaginons que nous ayons un cahier constitué de pages et 25 lignes par page. Je veux donner des instructions pour calculer le prix TTC en partant d'un prix hors taxes, d'une quantité et d'un taux de TVA.
+
+### Avec une grammaire que j'invente cela pourrait donner.
 
 ```
 écrire page 2 ligne 1 le nombre de tomates en stock
