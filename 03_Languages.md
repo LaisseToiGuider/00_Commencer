@@ -65,3 +65,9 @@ Le séparateur décimal est le point.
 ```
 var prix_HT = 4.5; var TVA = 5.5;
 ```
+
+## Les grammaires les plus connues
+
+Dans la liste des grammaires ou langages tu as peut-être entendu parler de Python, Java, Javascript, PHP, C, C++, Basic. Il en existe des milliers avec chacun ses particularités. 
+
+> Si tu veux continuer avec un autre langage tu peux le faire, mais je vais continuer avec des exemples en C#
