@@ -26,7 +26,7 @@ Tout le reste a été crée par l'homme et tout est une question de convention.
 
 ## Anecdote
 
-Cette vidéo date un peu et l'ordinateur le plus puissant de l'époque (le Cray-1) est dépassé par le smartphone que tu possèdes certainement. Il est même 10 fois plus puissant que le Cray-1 !
+Cette vidéo date un peu et l'ordinateur le plus puissant de l'époque (le Cray-1) est dépassé par le smartphone que tu as certainement dans ta poche. Il est même 10 fois plus puissant que le Cray-1 !
 
 ## Pour les élèves ingénieurs
 
