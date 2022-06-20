@@ -54,9 +54,11 @@ Vous avez compris assez vite cette grammaire. Les instructions permettent de fai
 var quantiteTomate = 5;
 ```
 
-var est un diminutif de variable. quantiteTomate est le nom de cette variable. Ici la gestion de l'emplacement mémoire est masqué et automatique, tu n'as pas à t'en soucier.
+var est un diminutif de variable. quantiteTomate est le nom de cette variable. Ici la gestion de l'emplacement mémoire est masquée et automatique, tu n'as pas à t'en soucier.
 
-Le nom de la variable ne peut pas contenir d'espace mais peut contenir majuscules, minuscules, tiret bas, chiffre mais pas en premier caractère.
+Le nom de la variable ne peut pas contenir d'espace mais peut contenir majuscules, minuscules, tiret bas, chiffre mais pas en premier caractère. En C# tu peux utiliser les accents, ce n'est pas toujours possible dans d'autres langages.
+
+Les majuscules et minuscules sont importantes, quantite ce n'est pas la même chose que Quantite. On dit que c'est [sensible à la casse](https://fr.wikipedia.org/wiki/Sensibilit%C3%A9_%C3%A0_la_casse).
 
 Enfin le point-virgule est un séparateur d'instruction. Tu peux donc mettre plusieurs instructions sur la même ligne.
 
@@ -68,6 +70,6 @@ var prix_HT = 4.5; var TVA = 5.5;
 
 ## Les grammaires les plus connues
 
-Dans la liste des grammaires ou langages tu as peut-être entendu parler de Python, Java, Javascript, PHP, C, C++, Basic. Il en existe des milliers avec chacun ses particularités. 
+Dans la liste des grammaires ou langages tu as peut-être entendu parler de Python, Java, Javascript, PHP, C, C++, Basic... Il en existe des milliers avec chacun ses particularités.
 
-> Si tu veux continuer avec un autre langage tu peux le faire, mais je vais continuer avec des exemples en C#
+> Si tu veux continuer avec un autre langage tu peux le faire, je vais continuer avec des exemples en C#
