@@ -1,3 +1,4 @@
+![Allura - Keeping in Touch](https://user-images.githubusercontent.com/107787061/174765432-ac8d9670-2824-4bd6-ae79-15c79c15449b.png)
 ## Outils
 
 Tu vas bientôt commencer à écrire un peu de code. Comme tu l'as vu plus tôt il faut un compilateur pour interpréter et transformer un langage en code compréhensible par l'ordinateur.
