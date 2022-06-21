@@ -25,7 +25,7 @@ Discord est un outil de messagerie instantané texte mais aussi de salons vocaux
 
 Je t'invite à t'inscrire sur Discord : [Voici le lien de l'invitation](https://discord.gg/qspWQHADgk)
 - Discord ne révélera rien sur toi, sauf dans ton pseudo. N'utilise pas ton prénom comme pseudo.
-- Ne poste jamais d'information personnelle dans Discord, si quelqu'un te demande où tu habites ou le nom de ton école, ne réponds pas et viens me le signaler, parle en à tes parents.
+- Ne poste jamais d'information personnelle dans Discord, si quelqu'un te demande où tu habites ou le nom de ton école ou une photo, ne réponds pas et viens me le signaler, parle en immédiatement à tes parents.
 - Mon pseudo Discord est @iso8859
 
 Tu peux utiliser Discord dans un navigateur web ou installer l'application, je te propose de commencer en mode web.
