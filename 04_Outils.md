@@ -9,6 +9,8 @@ Pour les étapes ci-dessous, **fait le avec tes parents**. Si tu rencontres des 
 
 Dans tous les cas il te faut une adresse mail. Soit tu utilises l'adresse de tes parents ou alors tu peux t'en créer une.
 
+## Adresse mail
+
 Je te propose de créer une adresse Google Gmail mais il faut avoir plus de 13 ans. Si tu as un téléphone Android tu possèdes déjà un compte Google.
 - [Lien pour la création d'un compte Google](https://accounts.google.com/)
 
