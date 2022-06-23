@@ -33,7 +33,14 @@ Tu peux utiliser Discord dans un navigateur web ou installer l'application, je t
 
 ## Replit
 
-Replit est l'outil principal qui permet d'écrire, compiler et tester du code. Tout ceci dans un navigateur web. Il permet de partager ton code, fonction très utile pour te faire aider.
+Replit est l'outil principal qui permet d'écrire, compiler et tester du code. Tout ceci dans un navigateur web. 
+
+**Il permet de partager ton code, fonction très utile pour te faire aider.**
+
 - [Lien Replit](https://replit.com/)
 - Ensuite il faut cliquer sur "Signup" en haut à droite
 - Si tu as un compte Google, choisis "Continue with Google" sinon il faut mettre ton mail + un nouveau mot de passe (pas celui de ton adresse mail).
+
+## Ton premier projet Replit
+
+
