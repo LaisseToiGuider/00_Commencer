@@ -43,4 +43,18 @@ Replit est l'outil principal qui permet d'écrire, compiler et tester du code. T
 
 ## Ton premier projet Replit
 
+Si tout s'est bien passé tu peux créer un nouveau projet avec le bouton "+ Create" en haut à gauche. Si tu es bloqué demande de l'aide par mail ou sur Discord dans #environnement
 
+![replit1](https://user-images.githubusercontent.com/802089/175196365-2a52b483-2fb7-44d0-90f3-bf800dd952c9.png)
+
+Vas y, appuie sur "+ Create" et puis choisi C#, ensuite donne un nom à ton projet puis bouton "+ Create Repl"
+
+![replit2](https://user-images.githubusercontent.com/802089/175197212-aec2f25d-3452-4729-9890-6bf33d443419.png)
+
+Tu dois arriver sur un espace de travail qui ressemble à ceci
+
+![replit3](https://user-images.githubusercontent.com/802089/175197445-3b18a27e-cc87-4cd1-b2be-d37b74f94167.png)
+
+Le bouton "Run" en haut permet de compiler puis exécuter ton projet.
+
+Tu peux modifier le texte affiché et faire un essai.
