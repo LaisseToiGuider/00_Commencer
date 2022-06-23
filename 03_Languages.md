@@ -73,3 +73,9 @@ var prix_HT = 4.5; var TVA = 5.5;
 Dans la liste des grammaires ou langages tu as peut-être entendu parler de Python, Java, Javascript, PHP, C, C++, Basic... Il en existe des milliers avec chacun ses particularités.
 
 > Si tu veux continuer avec un autre langage tu peux le faire, je vais continuer avec des exemples en C#
+
+## Préparons ton espace de travail
+
+Assez parlé, il est temps de passer au concret et de voir comment obtenir de l'aide.
+
+[Étape 4 les outils](04_Outils.md)
