@@ -3,7 +3,7 @@
 
 Tu vas bientôt commencer à écrire un peu de code. Comme tu l'as vu plus tôt il faut un compilateur pour interpréter et transformer un langage en code compréhensible par l'ordinateur.
 
-Il faut aussi que tu puisses échanger si tu es bloqué.
+Il faut aussi que tu puisses trouver de l'aide si tu es blouqué.
 
 Pour les étapes ci-dessous, **fait le avec tes parents**. Si tu rencontres des difficultés, écris à l'adresse mail laissetoiguider at remanence.fr.
 
@@ -20,7 +20,7 @@ En solution alternative tu peux créer une adresse chez les Suisses [Infomaniak]
 
 > Astuce sécurité : pour ton adresse mail utilise un mot de passe assez compliqué. Ne jamais réutiliser ce mot de passe ailleurs.
 
-> Astuce mot de passe : Prends le titre d'un oeuvre que tu aimes et un chiffre facile à retenir. Par exemple si tu aimes Harry Potter et que tu habites au numéro 45 tu peux utiliser LEcoleDesSorciers45!
+> Astuce mot de passe : Prends le titre d'un oeuvre que tu aimes et un chiffre facile à retenir. Par exemple si tu aimes Harry Potter et que tu habites au numéro 45 tu peux utiliser LEcoleDesSorciers45! mais aussi les espaces, donc "l'Ecole Des Sorciers 45" est un mot de passe valable.
 
 ## Discord
 
