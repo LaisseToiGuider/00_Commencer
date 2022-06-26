@@ -4,7 +4,7 @@
 
 Un ordinateur est constitué au minimum de 3 éléments
 - Une mémoire de stockage (en noir). Cela fonctionne comme un cahier, plus tu as de pages plus tu peux y mettre de choses. Dans cette mémoire on y trouve les instructions et on y stocke les résultats.
-- Une mémoire de travail (en vert). C'est l'endroit où l'ordinateur fait ses calculs. C'est comparable à ta feuille de brouillons si tu dois faire des calculs sans calculatrice, tu y poses toutes tes opérations et tu mets le résultat dans ton cahier.
+- Une mémoire de travail (en vert). C'est l'endroit où l'ordinateur fait ses calculs. C'est comparable à ta feuille de brouillons quand tu fais des calculs à la main, tu y poses toutes tes opérations et tu mets le résultat dans ton cahier.
 - Une horloge (en rouge). Elle cadence le fonctionnement de l'ordinateur, nous n'en parlerons plus mais elle est bien présente.
 
 
