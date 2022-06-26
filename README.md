@@ -23,7 +23,6 @@ Avance avec des exercices adaptés à ton niveau.
 ## De quoi as-tu besoin ?
 D’un ordinateur, cela peut être celui de tes parents. Nous n’allons rien installer dessus.
 
-- De quoi faire de la visio (micro + son, webcam facultative)
 - D’une adresse mail à toi, si tu n’en possèdes pas nous t’en créons une.
 - D’un compte Replit (nous verrons ensemble le moment venu)
 - D’un compte Discord.
