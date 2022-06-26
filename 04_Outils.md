@@ -60,3 +60,9 @@ Tu dois arriver sur un espace de travail qui ressemble à ceci
 Le bouton "Run" en haut permet de compiler puis exécuter ton projet.
 
 Tu peux modifier le texte affiché et faire un essai.
+
+## Le cours peut commencer
+
+Je vais proposer des cours assez cours sous forme de TP. Tu vas pouvoir essayer immédiatement dans un mini projet Replit.
+
+[Premier TP](TP/TP01/01_TP.md)
