@@ -38,3 +38,5 @@ Nous utiliserons des outils en anglais mais cela restera de l’anglais simple, 
 ## Es-tu prêt à commencer ?
 
 [Tout commence ici](01_Decouverte.md)
+
+> Je vais avoir un ton adapté à des jeunes apprenants souvent mineurs, mais ce cours s'adresse à tout le monde bien entendu.
