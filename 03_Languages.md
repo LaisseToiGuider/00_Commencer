@@ -10,7 +10,7 @@ var prix = 5;
 
 > On appelle application ou app un programme informatique que tu utilises sur ton ordinateur ou smartphone.
 
-Il existe de nombreux langages. Je vais t'apprendre à utiliser le langage C# qui se prononce 'C-Sharp'. Pourquoi ce choix ? C'est un langage assez universel qui permet de faire tout type d'application : des applications avec des dessins, des pages web, des app Android ou iPhone, des jeux vidéo...
+Il existe de nombreux langages. Je vais t'apprendre à utiliser le langage C# qui se prononce 'C-Sharp'. Pourquoi ce choix ? C'est un langage assez universel qui permet de faire tout type d'application : des applications avec des dessins, des sites web, des app Android ou iPhone, des jeux vidéo...
 
 Les outils avancés pour écrire des applications C# sont gratuits, la documentation très complète est en français.
 
@@ -60,7 +60,7 @@ Le nom de la variable ne peut pas contenir d'espace mais peut contenir majuscule
 
 Les majuscules et minuscules sont importantes, quantite ce n'est pas la même chose que Quantite. On dit que c'est [sensible à la casse](https://fr.wikipedia.org/wiki/Sensibilit%C3%A9_%C3%A0_la_casse).
 
-Enfin le point-virgule est un séparateur d'instruction. Tu peux donc mettre plusieurs instructions sur la même ligne.
+Le point-virgule est un séparateur d'instruction. Tu peux donc mettre plusieurs instructions sur la même ligne.
 
 Le séparateur décimal est le point.
 
