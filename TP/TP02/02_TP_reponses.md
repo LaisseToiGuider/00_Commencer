@@ -1,30 +1,17 @@
-## Réponses TP 01
+## Réponses TP 02
 
 ```
 using System;
 
 class Program {
   public static void Main (string[] args) {
-    var agePere = 40;
-    var ageMere = 40; // Même age
-
-    if (agePere > ageMere)
-    {
-      Console.WriteLine("Mon père est plus vieux que ma mère.");
-    }
-    if (ageMere > agePere)
-    {
-      Console.WriteLine("Ma mère est plus vieille que mon père.");
-    }
-    if (ageMere == agePere)
-    {
-      Console.WriteLine("Mes parents ont le même âge.");
-    }
-    Console.WriteLine("Ce programme est terminé.");
+    string texte = "51";
+    int calcul = Convert.ToInt32(texte);
+    int reponse = calcul - 9;
+    Console.WriteLine("La réponse est " + reponse);
   }
 }
 ```
 ```
-Mes parents ont le même âge.
-Ce programme est terminé.
+La réponse est 42
 ```
