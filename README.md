@@ -43,7 +43,7 @@ N'hésite pas à tester, modifier, essayer, c'est comme cela que tu vas bien tou
 
 N'avance pas trop vite, fait un TP par jour par exemple. Si tu as eu des difficultés reviens sur le TP de la veille. Si un TP n'est pas bien compris tu vas avoir des difficultés par la suite.
 
-Surtout contacte-moi si tu ne comprends pas (voir page suivante). Peut-être suis-je allé un peu vite, ce n'est pas toujours facile à voir quand on crée un cours.
+Surtout contacte-moi si tu ne comprends pas (voir étape 4). Peut-être suis-je allé un peu vite, ce n'est pas toujours facile à voir quand on crée un cours.
 
 [Tout commence ici](01_Decouverte.md)
 
