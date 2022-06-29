@@ -11,6 +11,8 @@ Dans tous les cas il te faut une adresse mail. Soit tu utilises l'adresse de tes
 
 ## Adresse mail
 
+Il te faut une adresse mail pour créer d'autres comptes (Discord et Replit ci-dessous). Tu peux utiliser celle de tes parents mais c'est mieux d'avori la tienne.
+
 Je te propose de créer une adresse Google Gmail mais il faut avoir plus de 13 ans. Si tu as un téléphone Android tu possèdes déjà un compte Google.
 - [Lien pour la création d'un compte Google](https://accounts.google.com/)
 
