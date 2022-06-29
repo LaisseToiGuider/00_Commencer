@@ -3,17 +3,15 @@
 
 Tu vas bientôt commencer à écrire un peu de code. Comme tu l'as vu plus tôt il faut un compilateur pour interpréter et transformer un langage en code compréhensible par l'ordinateur.
 
-Il faut aussi que tu puisses trouver de l'aide si tu es blouqué.
+Nous allons créer un compte Discord pour avoir de l'aide et un compte Replit pour travailler.
 
-Pour les étapes ci-dessous, **fait le avec tes parents**. Si tu rencontres des difficultés, écris à l'adresse mail laissetoiguider at remanence.fr.
+Si tu rencontres des difficultés, écris à l'adresse mail laissetoiguider at remanence.fr.
 
 Dans tous les cas il te faut une adresse mail. Soit tu utilises l'adresse de tes parents ou alors tu peux t'en créer une.
 
 ## Adresse mail
 
-Il te faut une adresse mail pour créer d'autres comptes (Discord et Replit ci-dessous). Tu peux utiliser celle de tes parents mais c'est mieux d'avori la tienne.
-
-Je te propose de créer une adresse Google Gmail mais il faut avoir plus de 13 ans. Si tu as un téléphone Android tu possèdes déjà un compte Google.
+Si tu as un téléphone Android tu possèdes déjà un compte Google. Je te propose de créer une adresse Google Gmail mais il faut avoir plus de 13 ans.
 - [Lien pour la création d'un compte Google](https://accounts.google.com/)
 
 En solution alternative tu peux créer une adresse chez les Suisses [Infomaniak](https://www.infomaniak.com/fr)
