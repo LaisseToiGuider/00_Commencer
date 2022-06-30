@@ -3,7 +3,7 @@
 
 Tu vas bientôt commencer à écrire un peu de code. Comme tu l'as vu plus tôt il faut un compilateur pour interpréter et transformer un langage en code compréhensible par l'ordinateur.
 
-Nous allons créer un compte Discord pour avoir de l'aide et un compte Replit pour travailler.
+Nous allons créer un compte Discord pour que tu trouves de l'aide et un compte Replit pour travailler.
 
 Si tu rencontres des difficultés, écris à l'adresse mail laissetoiguider at remanence.fr.
 
