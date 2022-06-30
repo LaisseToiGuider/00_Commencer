@@ -56,3 +56,5 @@ Surtout contacte-moi si tu ne comprends pas (voir étape 4). Peut-être suis-je 
 [Tout commence ici](01_Decouverte.md)
 
 > Je vais avoir un ton adapté à des jeunes apprenants souvent mineurs, mais ce cours s'adresse à tout le monde bien entendu.
+
+> Illustrations [blush](https://blush.design/fr/search/tools)
