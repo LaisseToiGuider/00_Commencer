@@ -3,7 +3,7 @@
 ## Laisse-toi guider
 
 Un espace pour débutant ou pour ceux qui veulent progresser dans le code informatique.
-Tu peux communiquer l'adresse [laissetoiguider.ovh](http://www.laissetoiguider.ovh/) qui arrive ici.
+L'adresse [laissetoiguider.ovh](http://www.laissetoiguider.ovh/) arrive ici.
 
 ## Présentation
 
