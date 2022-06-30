@@ -26,6 +26,8 @@ Avance avec des exercices adaptés à ton niveau.
 ## Le programme
 Rapidement tu vas apprendre les bases de la programmation informatique, la mémoire, les variables, les calculs, les chaînes de caractères, les tests, les boucles...
 
+Un bon complément à Scratch et découvrir le code informatique comme étudié après le bac.
+
 ## De quoi as-tu besoin ?
 D’un ordinateur, cela peut être celui de tes parents. Nous n’allons rien installer dessus.
 
