@@ -71,9 +71,9 @@ L'interpréteur va analyser le texte et le transformer en instructions binaires,
 
 > Définition : Transformer un texte en instruction binaire = compiler ou compilation
 
-## Prochaine étape : les langues.
+## Prochaine étape : les langages.
 
-[Clique ici pour passer à l'étape suivante](03_Languages.md)
+[Clique ici pour passer à l'étape suivante](03_Langages.md)
 
 ## Si tu veux voir à quoi ressemble le code assembleur
 
