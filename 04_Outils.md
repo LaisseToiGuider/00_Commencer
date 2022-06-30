@@ -11,7 +11,7 @@ Dans tous les cas il te faut une adresse mail. Soit tu utilises l'adresse de tes
 
 ## Adresse mail
 
-Si tu as un téléphone Android tu possèdes déjà un compte Google. Je te propose de créer une adresse Google Gmail mais il faut avoir plus de 13 ans.
+Si tu as un téléphone Android tu possèdes déjà un compte Google. Si tu n'as pas de compte Google je te propose d'en créer un, il faut avoir plus de 13 ans.
 - [Lien pour la création d'un compte Google](https://accounts.google.com/)
 
 En solution alternative tu peux créer une adresse chez les Suisses [Infomaniak](https://www.infomaniak.com/fr)
