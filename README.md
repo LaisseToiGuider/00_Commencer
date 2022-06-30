@@ -13,12 +13,14 @@ Tu es curieux sur le sujet et veux apprendre à ton rythme ?
 
 Si tu t'orientes vers des études scientifiques tu devras forcément faire un peu de code un jour ou l’autre, prends de l’avance dès aujourd’hui.
 
-Viens rejoindre le Discord des débutants en programmation.
-Chacun son rythme et son niveau. **Ouvert à tous pour tous les âges.**
+Viens rejoindre le Discord des débutants en programmation. Chacun son rythme et son niveau. **Ouvert à tous pour tous les âges.**
 
 Avance avec des exercices adaptés à ton niveau.
 
 **Ne reste pas bloqué, trouve de l’aide et comment progresser.**
+
+## Le programme
+Rapidement tu vas apprendre les bases de la programmation informatique, la mémoire, les variables, les calculs, les chaînes de caractères, les tests, les boucles...
 
 ## De quoi as-tu besoin ?
 D’un ordinateur, cela peut être celui de tes parents. Nous n’allons rien installer dessus.
