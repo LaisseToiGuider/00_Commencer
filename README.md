@@ -11,7 +11,7 @@ L'adresse [laissetoiguider.ovh](http://www.laissetoiguider.ovh/) arrive ici.
 ## Présentation
 
 Sais-tu comment fonctionne un ordinateur ?
-Combien d’addition par seconde peut faire un ordinateur ?
+Combien d’additions par seconde peut faire un ordinateur ?
 Comment automatiser le calcul de ta moyenne ?
 Tu es curieux sur le sujet et veux apprendre à ton rythme ?
 
