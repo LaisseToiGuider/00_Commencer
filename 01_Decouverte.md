@@ -2,9 +2,10 @@
 
 Avant de commencer à coder il faut comprendre comment fonctionne un ordinateur.
 
-Cette vidéo de 30 minutes est très bien faite. Elle est un peu vieille mais est très facile à comprendre.
+Cette vidéo de 30 minutes est très bien faite : Extraite de C’est pas Sorcier est un peu vieille mais toujours exacte et surtout, elle  est très facile à comprendre.
 
-L'occasion de demander à tes parents si ils ont connu les disquettes.
+
+L'occasion de demander à tes parents s' ils se souviennent de Jamy et Fred et s’ils ont connu les disquettes.
 
 Clique sur l'image ci-dessous pour visionner la vidéo.
 
@@ -12,7 +13,7 @@ Clique sur l'image ci-dessous pour visionner la vidéo.
 
 ## Ce qu'il faut retenir
 
-Que l'ordinateur fonctionne avec de l'électricité. 
+L'ordinateur fonctionne avec de l'électricité. 
 
 Zéro (pas d'électricité) ou Un (le courant passe).
 
@@ -28,7 +29,7 @@ Tout le reste a été crée par l'homme et tout est une question de convention.
 
 Cette vidéo date un peu et l'ordinateur le plus puissant de l'époque (le Cray-1) est dépassé par le smartphone que tu as certainement dans ta poche. Il est même 10 fois plus puissant que le Cray-1 !
 
-## Pour les élèves ingénieurs
+## Pour les futurs ingénieurs
 
 Si tu veux creuser un peu l'histoire et le fonctionnement de microprocesseurs je te conseille cette vidéo assez technique mais très bien faite. Ne pas rater le simulateur 4004 à la 23eme minute.
 [https://youtu.be/ee-LhNZPZ1U](https://youtu.be/ee-LhNZPZ1U)
