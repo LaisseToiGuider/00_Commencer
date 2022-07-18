@@ -65,4 +65,4 @@ Tu peux modifier le texte affiché et faire un essai.
 
 Je vais proposer des cours assez cours sous forme de TP. Tu vas pouvoir essayer immédiatement dans un mini projet Replit.
 
-[Premier TP](TP/TP01/01_TP.md)
+[Premier TP](../TP/TP01/01_TP.md)
