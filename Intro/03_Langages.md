@@ -74,6 +74,8 @@ Dans la liste des grammaires ou langages tu as peut-être entendu parler de Pyth
 
 > Si tu veux continuer avec un autre langage tu peux le faire, je vais continuer avec des exemples en C#
 
+Le langage Python masque la notion de type (typage dynamique) et je pense que c'est plus compliqué pour toi bien comprendre cette notion. Si tu veux faire du Python je te conseille de commencer le TP en C# puis le refaire en Python.
+
 ## Préparons ton espace de travail
 
 Assez parlé, il est temps de passer au concret et de voir comment obtenir de l'aide.
