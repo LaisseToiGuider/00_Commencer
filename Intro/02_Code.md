@@ -73,7 +73,7 @@ L'interpréteur va analyser le texte et le transformer en instructions binaires,
 
 ## Prochaine étape : les langages.
 
-[Clique ici pour passer à l'étape suivante](03_Langages.md)
+## [Clique ici pour passer à l'étape suivante](03_Langages.md)
 
 ## Si tu veux voir à quoi ressemble le code assembleur
 
