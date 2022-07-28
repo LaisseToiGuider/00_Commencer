@@ -23,7 +23,7 @@ Ces portes logiques permettent de faire des calculs.
 
 Tout le reste a été crée par l'homme et tout est une question de convention.
 
-[La suite c'est ici](02_Code.md)
+## [La suite c'est ici](02_Code.md)
 
 ## Anecdote
 
