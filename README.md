@@ -53,7 +53,7 @@ N'avance pas trop vite, fais un TP par jour par exemple. Si tu as eu des difficu
 
 Surtout contacte-moi si tu ne comprends pas (voir étape 4).
 
-[Tout commence ici](Intro/01_Decouverte.md)
+## [Tout commence ici](Intro/01_Decouverte.md)
 
 > Je vais avoir un ton adapté à des jeunes apprenants, mais ce cours s'adresse à tout le monde bien entendu.
 
