@@ -45,7 +45,7 @@ Nous utiliserons des outils en anglais mais cela restera de l’anglais simple, 
 
 ## Es-tu prêt à commencer ?
 
-Je vais te donner des exercices à faire sous forme de TP.
+Je vais te donner des exercices à faire sous forme de TP (travaux pratiques).
 
 N'hésite pas à tester, modifier, essayer, c'est comme cela que tu vas bien tout comprendre et apprendre.
 
