@@ -32,7 +32,7 @@ Celui qui met au point le microprocesseur décide des instructions.
 
 Par exemple il va décider que le code 00000001 veut dire additionner registre A + registre B et mettre la réponse dans le registre C.
 
-Comme tu le vois c'est assez compliqué de travailler en binaire et travailler avec les registres.
+Comme tu le vois c'est assez compliqué de travailler en binaire et avec les registres.
 
 Rassure-toi, on a inventé des langues et des grammaires bien plus simples.
 
