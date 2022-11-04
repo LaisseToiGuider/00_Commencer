@@ -57,7 +57,7 @@ Ligne 4 on utilise une fonction pour afficher à l'écran ce que contient "valeu
 
 ![02_cap1](https://user-images.githubusercontent.com/107787061/174474388-bb6a4e4f-6881-44c4-88cd-ffa92c469453.png)
 
-[Va sur ce lien](https://dotnetfiddle.net/YRT6wD), tu vas retrouver cet exemple.
+[Va sur ce lien](https://dotnetfiddle.net/YRT6wD), tu vas retrouver cet exemple. (CTRL+clic pour l'ouvrir dans un nouvel onglet)
 
 Appuie sur le bouton "Run" tout en haut pour demander à démarrer le programme.
 
