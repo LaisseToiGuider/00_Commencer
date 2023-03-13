@@ -1,12 +1,12 @@
 
 ![Dayflow - Sitting](https://user-images.githubusercontent.com/107787061/174484634-84d395b6-d62f-443c-b2b6-f5c903f3b545.png)
-## Laisse-toi guider
+## Cous programmation gratuit
 
 Un espace pour débutant ou pour ceux qui veulent progresser dans le code informatique.
 
 Totalement gratuit.
 
-L'adresse [laissetoiguider.ovh](http://www.laissetoiguider.ovh/) arrive ici.
+L'adresse [cours-programmation-gratuit.fr](cours-programmation-gratuit.fr) arrive ici.
 
 ## Présentation
 
