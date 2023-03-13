@@ -6,7 +6,7 @@ Un espace pour débutant ou pour ceux qui veulent progresser dans le code inform
 
 Totalement gratuit.
 
-L'adresse [cours-programmation-gratuit.fr](cours-programmation-gratuit.fr) arrive ici.
+L'adresse [cours-programmation-gratuit.fr](https://cours-programmation-gratuit.fr) arrive ici.
 
 ## Présentation
 
