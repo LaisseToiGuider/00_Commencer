@@ -32,7 +32,7 @@ Celui qui met au point le microprocesseur décide des instructions.
 
 Par exemple il va décider que le code 00000001 veut dire additionner registre A + registre B et mettre la réponse dans le registre C.
 
-Comme tu le vois c'est assez compliqué de travailler en binaire et travailler avec les registres.
+Comme tu le vois c'est assez compliqué de travailler en binaire et avec les registres.
 
 Rassure-toi, on a inventé des langues et des grammaires bien plus simples.
 
@@ -57,7 +57,7 @@ Ligne 4 on utilise une fonction pour afficher à l'écran ce que contient "valeu
 
 ![02_cap1](https://user-images.githubusercontent.com/107787061/174474388-bb6a4e4f-6881-44c4-88cd-ffa92c469453.png)
 
-[Va sur ce lien](https://dotnetfiddle.net/YRT6wD), tu vas retrouver cet exemple.
+[Va sur ce lien](https://dotnetfiddle.net/YRT6wD), tu vas retrouver cet exemple. (CTRL+clic pour l'ouvrir dans un nouvel onglet)
 
 Appuie sur le bouton "Run" tout en haut pour demander à démarrer le programme.
 
@@ -73,7 +73,7 @@ L'interpréteur va analyser le texte et le transformer en instructions binaires,
 
 ## Prochaine étape : les langages.
 
-[Clique ici pour passer à l'étape suivante](03_Langages.md)
+## [Clique ici pour passer à l'étape suivante](03_Langages.md)
 
 ## Si tu veux voir à quoi ressemble le code assembleur
 

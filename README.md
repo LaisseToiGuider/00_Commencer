@@ -1,12 +1,12 @@
 
 ![Dayflow - Sitting](https://user-images.githubusercontent.com/107787061/174484634-84d395b6-d62f-443c-b2b6-f5c903f3b545.png)
-## Laisse-toi guider
+## Cous programmation gratuit
 
 Un espace pour débutant ou pour ceux qui veulent progresser dans le code informatique.
 
 Totalement gratuit.
 
-L'adresse [laissetoiguider.ovh](http://www.laissetoiguider.ovh/) arrive ici.
+L'adresse [cours-programmation-gratuit.fr](https://cours-programmation-gratuit.fr) arrive ici.
 
 ## Présentation
 
@@ -26,7 +26,7 @@ Avance avec des exercices adaptés à ton niveau.
 ## Le programme
 Rapidement tu vas apprendre les bases de la programmation informatique, la mémoire, les variables, les calculs, les chaînes de caractères, les tests, les boucles...
 
-Un bon complément à Scratch et découvrir le code informatique comme étudié après le bac.
+Un bon complément à Scratch et découvrir le code informatique comme étudié après le bac mais surtout pour bien comprendre comment fonctionne un ordinateur et avoir de bonnes bases en algorithmie.
 
 ## De quoi as-tu besoin ?
 D’un ordinateur, cela peut être celui de tes parents. Nous n’allons rien installer dessus.
@@ -45,7 +45,7 @@ Nous utiliserons des outils en anglais mais cela restera de l’anglais simple, 
 
 ## Es-tu prêt à commencer ?
 
-Je vais te donner des exercices à faire sous forme de TP.
+Je vais te donner des exercices à faire sous forme de TP (travaux pratiques).
 
 N'hésite pas à tester, modifier, essayer, c'est comme cela que tu vas bien tout comprendre et apprendre.
 
@@ -53,7 +53,7 @@ N'avance pas trop vite, fais un TP par jour par exemple. Si tu as eu des difficu
 
 Surtout contacte-moi si tu ne comprends pas (voir étape 4).
 
-[Tout commence ici](Intro/01_Decouverte.md)
+## [Tout commence ici](Intro/01_Decouverte.md)
 
 > Je vais avoir un ton adapté à des jeunes apprenants, mais ce cours s'adresse à tout le monde bien entendu.
 

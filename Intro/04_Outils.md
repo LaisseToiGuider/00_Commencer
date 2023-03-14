@@ -5,7 +5,7 @@ Tu vas bientôt commencer à écrire un peu de code. Comme tu l'as vu plus tôt 
 
 Nous allons créer un compte Discord pour que tu trouves de l'aide et un compte Replit pour travailler.
 
-Si tu rencontres des difficultés, écris à l'adresse mail laissetoiguider at remanence.fr.
+Si tu rencontres des difficultés, écris à l'adresse mail bonjour at laissetoiguider.ovh
 
 Dans tous les cas il te faut une adresse mail. Soit tu utilises l'adresse de tes parents ou alors tu peux t'en créer une.
 
