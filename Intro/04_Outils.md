@@ -49,9 +49,10 @@ Si tout s'est bien passé tu peux créer un nouveau projet avec le bouton "+ Cre
 
 ![replit1](https://user-images.githubusercontent.com/802089/175196365-2a52b483-2fb7-44d0-90f3-bf800dd952c9.png)
 
-Vas y, appuie sur "+ Create" et puis choisi C# (tapes C# dans la recherche), ensuite donne un nom à ton projet puis bouton "+ Create Repl"
+Vas y, appuie sur "+ Create" et puis choisi C# (tapes C# dans la recherche), prends "C# replit", ensuite donne un nom à ton projet puis bouton "+ Create Repl"
 
-![replit2](https://user-images.githubusercontent.com/802089/175197212-aec2f25d-3452-4729-9890-6bf33d443419.png)
+![replit2](https://github.com/LaisseToiGuider/00_Commencer/assets/802089/3a7f32be-0a3b-4b42-8656-ccde6a403444)
+
 
 Tu dois arriver sur un espace de travail qui ressemble à ceci
 
