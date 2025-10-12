@@ -33,30 +33,41 @@ Je t'invite à t'inscrire sur Discord : [Voici le lien de l'invitation](https://
 
 Tu peux utiliser Discord dans un navigateur web ou installer l'application, je te propose de commencer en mode web.
 
-## Replit
+## Github
 
-Replit est l'outil principal qui permet d'écrire, compiler et tester du code. Tout ceci dans un navigateur web. 
+Github est l'outil principal qui permet d'écrire, compiler et tester du code. Tout ceci dans un navigateur web. 
 
 **Il permet de partager ton code, fonction très utile pour te faire aider.**
 
-- [Lien Replit](https://replit.com/)
+- [Lien Github](https://github.com/)
 - Ensuite il faut cliquer sur "Signup" en haut à droite
 - Si tu as un compte Google, choisis "Continue with Google" sinon il faut mettre ton mail + un nouveau mot de passe (pas celui de ton adresse mail).
+- Il te faudra choisir un nom d'utilisateur. Il doit être original et unique. Attention car ensuite tu pourrais y faire référence, donc ne choisit pas un nom trop scolaire ou enfantin.
 
-## Ton premier projet Replit
+<img width="556" height="632" alt="2025-10-12 07_16_09-Sign up for GitHub · GitHub" src="https://github.com/user-attachments/assets/4240fb14-93f1-49a6-b8f7-902632874fe3" />
 
-Si tout s'est bien passé tu peux créer un nouveau projet avec le bouton "+ Create" en haut à gauche. Si tu es bloqué demande de l'aide par mail ou sur Discord dans #environnement
+## Ton premier projet Github
 
-![replit1](https://user-images.githubusercontent.com/802089/175196365-2a52b483-2fb7-44d0-90f3-bf800dd952c9.png)
+Si tout s'est bien passé tu peux créer un nouveau projet avec le bouton vert "New" en haut à droite. Si tu es bloqué demande de l'aide par mail ou sur Discord dans #environnement
 
-Vas y, appuie sur "+ Create" et puis choisi C# (tapes C# dans la recherche), prends "C# replit", ensuite donne un nom à ton projet puis bouton "+ Create Repl"
+<img width="241" height="127" alt="2025-10-12 07_19_30-Your Repositories and 1 more page - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/f789d26c-8339-45aa-a783-bbe82a90fdc9" />
 
-![replit2](https://github.com/LaisseToiGuider/00_Commencer/assets/802089/3a7f32be-0a3b-4b42-8656-ccde6a403444)
+Vas y, appuie sur "New", puis donne un nom à ton projet, par exemple "Premier Projet", une description si tu veux. Tu ne changes rien au reste de l'écran puis "Create Repository".
 
+<img width="835" height="389" alt="2025-10-12 07_21_17-New repository and 1 more page - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/ab6d80d2-a2e5-45a4-8110-c1a346e656dc" />
 
-Tu dois arriver sur un espace de travail qui ressemble à ceci
+Tu arrives sur une page avec une adresse du type https://github.com/ton_pseudo/nom-de-ton-projet. Chez moi cela donne.
 
-![replit3](https://user-images.githubusercontent.com/802089/175197445-3b18a27e-cc87-4cd1-b2be-d37b74f94167.png)
+<img width="425" height="51" alt="2025-10-12 07_25_47-LaisseToiGuider_Premier-Projet and 1 more page - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/15c8517b-bbf0-4d62-9d70-da0591b34bcb" />
+
+Maintenant nous allons passer en mode développeur, pour cela tu peux appuiyer sur le . (le point) sous les lettres K & L ou sur le pavé numérique.
+
+Tu vas arriver sur l'adresse https://github.dev/ton_pseudo/nom-de-ton-projet. .com est devenu .dev Si le point ne change rien alors corriges l'adresse à la main.
+
+Tu es sur cet écran
+
+<img width="849" height="601" alt="2025-10-12 07_28_57-Welcome - Visual Studio Code and 1 more page - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/a12ecf89-768d-4233-bbcd-e241087da4f2" />
+
 
 Le bouton "Run" en haut permet de compiler puis exécuter ton projet.
 
