@@ -33,45 +33,44 @@ Je t'invite à t'inscrire sur Discord : [Voici le lien de l'invitation](https://
 
 Tu peux utiliser Discord dans un navigateur web ou installer l'application, je te propose de commencer en mode web.
 
-## Github
+## Environnement de travail
 
-Github est l'outil principal qui permet d'écrire, compiler et tester du code. Tout ceci dans un navigateur web. 
+Il va falloir maintenant devoir faire un choix.
+- Soit travailler directement sur ton ordinateur (le plus simple) = mode local
+- Soit travailler dans Github Codespace, un ordinateur en ligne que tu utilises dans ton navigateur web = mode distant
 
-**Il permet de partager ton code, fonction très utile pour te faire aider.**
+Si tu viens simplement faire quelques tests ou que ton ordinateur n'est pas le tien ou qu'il est assez vieux, alors je te conseille de travailler en mode Codespace. Codespace = un ordinateur à distance.
 
-- [Lien Github](https://github.com/)
-- Ensuite il faut cliquer sur "Signup" en haut à droite
-- Si tu as un compte Google, choisis "Continue with Google" sinon il faut mettre ton mail + un nouveau mot de passe (pas celui de ton adresse mail).
-- Il te faudra choisir un nom d'utilisateur. Il doit être original et unique. Attention car ensuite tu pourrais y faire référence, donc ne choisit pas un nom trop scolaire ou enfantin.
+Si tu as un PC assez puissant et récent et que tu peux installer ce que tu veux dessus je te conseille de travailler en mode local.
 
-<img width="556" height="632" alt="2025-10-12 07_16_09-Sign up for GitHub · GitHub" src="https://github.com/user-attachments/assets/4240fb14-93f1-49a6-b8f7-902632874fe3" />
+## Installation du mode local
 
-## Ton premier projet Github
+D'abord installer dotnet sdk. Pour cela aller sur [dot.net](https://dot.net) puis télécharger et installer le SDK de la dernière version. SDK = Software Development Kit = Kit de développement logiciel.
 
-Si tout s'est bien passé tu peux créer un nouveau projet avec le bouton vert "New" en haut à droite. Si tu es bloqué demande de l'aide par mail ou sur Discord dans #environnement
+<img width="457" height="323" alt="2025-10-12 17_38_24-192 168 10 182 - Remote Desktop Connection" src="https://github.com/user-attachments/assets/27274290-c018-4287-8034-7c308abede78" />
+<img width="642" height="479" alt="2025-10-12 17_41_19-192 168 10 182 - Remote Desktop Connection" src="https://github.com/user-attachments/assets/fc2b7104-a784-478a-9882-841ee773192a" />
 
-<img width="241" height="127" alt="2025-10-12 07_19_30-Your Repositories and 1 more page - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/f789d26c-8339-45aa-a783-bbe82a90fdc9" />
+Ensuite nous allons installer Visual Studio Code disponible sur [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
-Vas y, appuie sur "New", puis donne un nom à ton projet, par exemple "Premier Projet", une description si tu veux. Tu ne changes rien au reste de l'écran puis "Create Repository".
+<img width="602" height="367" alt="2025-10-12 17_43_16-Visual Studio Code - Code Editing  Redefined and 2 more pages - Personal - Micro" src="https://github.com/user-attachments/assets/e0344eb7-a54f-4f31-8716-6782686859c1" />
 
-<img width="835" height="389" alt="2025-10-12 07_21_17-New repository and 1 more page - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/ab6d80d2-a2e5-45a4-8110-c1a346e656dc" />
+Tu peux démarrer Visual Studio Code, nous allons ajouter une extension. Pour cela une fois démarré tu cliques sur les 4 petits carrés sur le bandeau de gauche. Puis tu cherches "C# Dev Kit" et tu cliques sur "install".
 
-Tu arrives sur une page avec une adresse du type https://github.com/ton_pseudo/nom-de-ton-projet. Chez moi cela donne.
+Pour travailler il te faut un dossier sur ton ordinateur. Tu peux choisir le dossier que tu veux, par exemple sur le bureau tu crées un dossier appelé TP01 puis tu le choisis.
 
-<img width="425" height="51" alt="2025-10-12 07_25_47-LaisseToiGuider_Premier-Projet and 1 more page - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/15c8517b-bbf0-4d62-9d70-da0591b34bcb" />
+Ensuite tu vas dans le menu "Terminal" puis "New Terminal". Et tu tapes "dotnet new console".
 
-Maintenant nous allons passer en mode développeur, pour cela tu peux appuiyer sur le . (le point) sous les lettres K & L ou sur le pavé numérique.
+<img width="269" height="97" alt="2025-10-12 18_02_54-192 168 10 182 - Remote Desktop Connection" src="https://github.com/user-attachments/assets/5e053ee6-2f8d-42cc-9c29-36118bee6360" />
 
-Tu vas arriver sur l'adresse https://github.dev/ton_pseudo/nom-de-ton-projet. .com est devenu .dev Si le point ne change rien alors corriges l'adresse à la main.
+et tu valides. Des fichiers se créent. Toujours dans la console tapes "dotnet run".
 
-Tu es sur cet écran
+<img width="244" height="204" alt="2025-10-12 18_04_08-192 168 10 182 - Remote Desktop Connection" src="https://github.com/user-attachments/assets/5a7cfc37-164c-4e74-ac41-0ae33e82e80a" />
 
-<img width="849" height="601" alt="2025-10-12 07_28_57-Welcome - Visual Studio Code and 1 more page - Personal - Microsoft​ Edge" src="https://github.com/user-attachments/assets/a12ecf89-768d-4233-bbcd-e241087da4f2" />
+Tu dois voir apparaître "Hello World!". C'est parfait, c'est que tout est installé correctement.
+
+<img width="393" height="90" alt="2025-10-12 18_06_08-192 168 10 182 - Remote Desktop Connection" src="https://github.com/user-attachments/assets/bad1b63e-212a-4cdf-9bf9-d8c2dccb969d" />
 
 
-Le bouton "Run" en haut permet de compiler puis exécuter ton projet.
-
-Tu peux modifier le texte affiché et faire un essai.
 
 ## Le cours peut commencer
 
