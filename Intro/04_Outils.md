@@ -39,7 +39,7 @@ Il va falloir maintenant devoir faire un choix.
 - Soit travailler directement sur ton ordinateur (le plus simple) = mode local
 - Soit travailler dans Github Codespace, un ordinateur en ligne que tu utilises dans ton navigateur web = mode distant
 
-Si tu viens simplement faire quelques tests ou que ton ordinateur n'est pas le tien ou qu'il est assez vieux, alors je te conseille de travailler en mode Codespace. Codespace = un ordinateur à distance.
+Si tu viens simplement faire quelques tests ou que ton ordinateur n'est pas le tien ou qu'il est assez vieux, alors je te conseille de travailler en mode Codespace. Codespace = un ordinateur à distance. Les explications sur le mode Codespace arrivent dans quelques jours.
 
 Si tu as un PC assez puissant et récent et que tu peux installer ce que tu veux dessus je te conseille de travailler en mode local.
 
