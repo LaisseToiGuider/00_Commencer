@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 3 : Saisie Console.ReadLine() | code-and.fun</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        display: ['Fredoka', 'sans-serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            purple: '#A78BFA',
+                            darkPurple: '#7C3AED',
+                            yellow: '#FBBF24',
+                            pink: '#F472B6',
+                            green: '#34D399',
+                            blue: '#60A5FA',
+                            bg: '#FDFCFB'
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(124, 58, 237, 0.1)',
+                        'card': '0 20px 40px -15px rgba(0,0,0,0.05)',
+                        'btn': '0 8px 20px -6px rgba(124, 58, 237, 0.3)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { margin: 0; padding: 0; background-color: #FDFCFB; }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .scribble-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .scribble-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0,10 Q25,20 50,10 T100,10' fill='none' stroke='%23A78BFA' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            z-index: -1;
+        }
+        .scribble-yellow::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0,15 Q25,5 50,15 T100,15' fill='none' stroke='%23FBBF24' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+        }
+        
+        .code-block {
+            background-color: #0f172a;
+            color: #D4D4D4;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace';
+            font-size: 0.9rem;
+            line-height: 1.5;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            position: relative;
+        }
+        
+        .code-block .keyword { color: #569CD6; }
+        .code-block .string { color: #CE9178; }
+        .code-block .comment { color: #6A9955; }
+        .code-block .function { color: #DCDCAA; }
+        .code-block .number { color: #B5CEA8; }
+        .code-block .operator { color: #D4D4D4; }
+        .code-block .type { color: #4EC9B0; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased overflow-x-hidden selection:bg-brand-purple selection:text-white m-0 p-0">
+
+    <!-- HEADER -->
+    <header id="header" class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 bg-brand-darkPurple rounded-2xl flex items-center justify-center transform group-hover:rotate-12 transition-transform shadow-btn">
+                    <i class="fa-solid fa-code text-white text-xl"></i>
+                </div>
+                <span class="font-display font-bold text-2xl tracking-tight text-gray-900">code-and<span class="text-brand-purple">.fun</span></span>
+            </a>
+
+            <nav class="hidden xl:flex items-center gap-2 bg-gray-50/80 p-1.5 rounded-full border border-gray-100">
+                <a href="index.html" class="px-5 py-2.5 rounded-full text-sm font-semibold text-gray-600 hover:text-brand-darkPurple hover:bg-white transition-all">Accueil</a>
+                <a href="how-it-works-p1.html" class="px-5 py-2.5 rounded-full text-sm font-semibold text-gray-600 hover:text-brand-darkPurple hover:bg-white transition-all">Découverte</a>
+                <a href="how-it-works-p2.html" class="px-5 py-2.5 rounded-full text-sm font-semibold text-gray-600 hover:text-brand-darkPurple hover:bg-white transition-all">Comment ça marche</a>
+                <a href="lang.html" class="px-5 py-2.5 rounded-full text-sm font-semibold text-gray-600 hover:text-brand-darkPurple hover:bg-white transition-all">Les langages</a>
+                <a href="tools.html" class="px-5 py-2.5 rounded-full text-sm font-semibold text-gray-600 hover:text-brand-darkPurple hover:bg-white transition-all">Les outils</a>
+                
+                <div class="relative group px-5 py-2.5 bg-white shadow-sm ring-1 ring-gray-900/5 rounded-full">
+                    <span class="text-sm font-bold text-brand-darkPurple cursor-pointer flex items-center gap-2">Les TPs <i class="fa-solid fa-chevron-down text-xs"></i></span>
+                    <div class="absolute top-full right-0 mt-2 w-48 bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform translate-y-2 group-hover:translate-y-0">
+                        <div class="p-2 flex flex-col gap-1">
+                            <a href="tp1.html" class="px-4 py-2 text-sm font-medium text-gray-600 hover:bg-brand-purple/10 hover:text-brand-darkPurple rounded-xl transition-colors">TP 1 : Tests if/else</a>
+                            <a href="tp2.html" class="px-4 py-2 text-sm font-medium text-gray-600 hover:bg-brand-purple/10 hover:text-brand-darkPurple rounded-xl transition-colors">TP 2 : Le texte</a>
+                            <a href="tp3.html" class="px-4 py-2 text-sm font-bold text-brand-darkPurple bg-brand-purple/10 rounded-xl transition-colors">TP 3 : Saisie Console</a>
+                            <a href="tp4.html" class="px-4 py-2 text-sm font-medium text-gray-600 hover:bg-brand-purple/10 hover:text-brand-darkPurple rounded-xl transition-colors">TP 4 : Les boucles</a>
+                            <a href="tp5.html" class="px-4 py-2 text-sm font-medium text-gray-600 hover:bg-brand-purple/10 hover:text-brand-darkPurple rounded-xl transition-colors">TP 5 : Booléens</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="tp4.html" class="bg-brand-darkPurple hover:bg-brand-purple text-white px-6 py-3 rounded-full font-bold text-sm transition-all shadow-btn flex items-center gap-2 transform hover:-translate-y-0.5">
+                    TP Suivant
+                    <i class="fa-solid fa-arrow-right text-xs bg-white/20 p-1.5 rounded-full"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-20 bg-brand-bg">
+
+        <!-- TP HEADER -->
+        <section id="tp-header" class="py-16 md:py-24 relative overflow-hidden">
+            <div class="max-w-[1000px] mx-auto px-6 lg:px-12 relative z-10">
+                <div class="text-center mb-16">
+                    <div class="inline-flex items-center gap-2 bg-brand-purple/10 text-brand-darkPurple px-4 py-2 rounded-full text-sm font-bold tracking-wider uppercase mb-6">
+                        <i class="fa-solid fa-flask"></i> TP Numéro 3
+                    </div>
+                    <h1 class="font-display text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                        Lire ce que tape l'<span class="text-brand-purple scribble-underline">utilisateur</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 font-medium max-w-2xl mx-auto">
+                        Ton programme peut poser des questions et écouter les réponses !
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRODUCTION -->
+        <section id="intro-interactif" class="py-16 bg-white border-y border-gray-100">
+            <div class="max-w-[1000px] mx-auto px-6 lg:px-12">
+                <div class="mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Rendre ton programme interactif
+                    </h2>
+                </div>
+
+                <div class="bg-gray-50 rounded-[32px] p-8 md:p-12 border border-gray-100 mb-8">
+                    <p class="text-gray-600 mb-6 text-lg">
+                        Jusqu'ici, ton programme faisait des choses avec des valeurs que <strong>toi</strong> avais écrites dans le code. Mais un vrai programme peut aussi demander des informations à l'utilisateur et réagir en fonction.
+                    </p>
+                    
+                    <div class="bg-brand-purple/10 rounded-2xl p-6 border border-brand-purple/20">
+                        <p class="text-gray-700 mb-3">
+                            Pour lire ce que tape l'utilisateur au clavier, on utilise :
+                        </p>
+                        <pre class="code-block shadow-sm">Console.<span class="function">ReadLine</span>()</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PREMIER TEST -->
+        <section id="premier-test" class="py-16 bg-brand-bg">
+            <div class="max-w-[1000px] mx-auto px-6 lg:px-12">
+                <div class="mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Premier test : écouter l'utilisateur
+                    </h2>
+                </div>
+
+                <div class="bg-white rounded-[32px] p-8 md:p-12 shadow-card border border-gray-100 mb-8">
+                    <p class="text-gray-600 mb-6 text-lg">
+                        Crée un projet <strong>TP03-0</strong> et recopie ce code :
+                    </p>
+                    
+                    <pre class="code-block shadow-sm mb-6"><span class="keyword">using</span> System;
+
+<span class="keyword">class</span> <span class="type">Program</span> {
+    <span class="keyword">public static void</span> <span class="function">Main</span>(<span class="keyword">string</span>[] args) {
+        Console.<span class="function">WriteLine</span>(<span class="string">"Tape 'bonjour' ci-dessous puis appuie sur Entrée."</span>);
+        <span class="keyword">string</span> ligne1 = Console.<span class="function">ReadLine</span>();
+        Console.<span class="function">WriteLine</span>(ligne1);
+
+        Console.<span class="function">WriteLine</span>(<span class="string">"Maintenant tape ce que tu veux !"</span>);
+        <span class="keyword">string</span> ligne2 = Console.<span class="function">ReadLine</span>();
+        Console.<span class="function">WriteLine</span>(ligne2);
+    }
+}</pre>
+
+                    <p class="text-gray-600 text-lg">
+                        Lance le programme, tape du texte et appuie sur <strong>Entrée</strong>. Le programme lit ce que tu tapes et le réaffiche ! C'est un écho.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALCUL AVEC CHIFFRES -->
+        <section id="calcul-chiffres" class="py-16 bg-white border-y border-gray-100">
+            <div class="max-w-[1000px] mx-auto px-6 lg:px-12">
+                <div class="mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-calculator text-brand-blue"></i> Faire un calcul avec les chiffres tapés
+                    </h2>
+                </div>
+
+                <div class="bg-gray-50 rounded-[32px] p-8 md:p-12 border border-gray-100 mb-8">
+                    <p class="text-gray-600 mb-6 text-lg">
+                        Maintenant on va aller plus loin : demander deux nombres à l'utilisateur et calculer leur somme. Mais attention, <code>Console.ReadLine()</code> renvoie toujours du texte (un <code>string</code>). Il faut d'abord le convertir en nombre avant de calculer !
+                    </p>
+                    
+                    <p class="text-gray-600 mb-4 font-bold">
+                        Crée un projet <strong>TP03-1</strong> :
+                    </p>
+
+                    <pre class="code-block shadow-sm mb-8"><span class="keyword">using</span> System;
+
+<span class="keyword">class</span> <span class="type">Program</span> {
+    <span class="keyword">public static void</span> <span class="function">Main</span>(<span class="keyword">string</span>[] args) {
+        Console.<span class="function">WriteLine</span>(<span class="string">"Entre un premier nombre entier."</span>);
+        <span class="keyword">string</span> chiffre1 = Console.<span class="function">ReadLine</span>();
+
+        Console.<span class="function">WriteLine</span>(<span class="string">"Entre un second nombre entier."</span>);
+        <span class="keyword">string</span> chiffre2 = Console.<span class="function">ReadLine</span>();
+
+        <span class="comment">// On convertit les textes en nombres entiers</span>
+        <span class="keyword">int</span> c1 = Convert.<span class="function">ToInt32</span>(chiffre1);
+        <span class="keyword">int</span> c2 = Convert.<span class="function">ToInt32</span>(chiffre2);
+
+        <span class="keyword">int</span> somme = c1 + c2;
+        Console.<span class="function">WriteLine</span>(<span class="string">"La somme est égale à "</span> + somme);
+    }
+}</pre>
+
+                    <!-- ASTUCE COMPONENT -->
+                    <div class="bg-amber-50 rounded-2xl p-6 border border-amber-200 flex gap-4 mb-6">
+                        <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-key text-amber-500 text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-amber-800 mb-2">Pourquoi convertir ?</h4>
+                            <p class="text-amber-700 text-sm">
+                                Si tu tapais <strong>5</strong> au clavier, l'ordinateur reçoit le texte <code>"5"</code> (code ASCII 53). Ce n'est pas la même chose que le nombre <strong>5</strong> ! <code>Convert.ToInt32()</code> fait la conversion pour toi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- QUESTION -->
+                    <div class="bg-blue-50 rounded-2xl p-6 border border-blue-200 flex gap-4">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-question text-blue-500 text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-800 mb-2">Question : Que se passerait-il si tu écrivais <code>var somme = chiffre1 + chiffre2;</code> sans convertir ?</h4>
+                            <p class="text-blue-700 text-sm">
+                                Si tu entres <strong>5</strong> puis <strong>6</strong>, tu obtiendrais… <code>"56"</code> ! Parce que <code>+</code> sur deux strings les colle ensemble au lieu de les additionner.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXERCICE -->
+        <section id="exercice-pratique" class="py-16 bg-brand-bg">
+            <div class="max-w-[1000px] mx-auto px-6 lg:px-12">
+                <div class="mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-dumbbell text-brand-green"></i> C'est à ton tour !
+                    </h2>
+                </div>
+
+                <div class="bg-white rounded-[32px] p-8 md:p-12 shadow-card border border-gray-100 mb-8">
+                    <p class="text-gray-600 mb-6 text-lg">
+                        Tu sais faire la somme. Maintenant modifie le programme pour aussi afficher :
+                    </p>
+                    
+                    <ul class="space-y-4 text-gray-700 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand-green mt-1"></i>
+                            <span>La soustraction : <code>c1 - c2</code></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand-green mt-1"></i>
+                            <span>La multiplication : <code>c1 * c2</code></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand-green mt-1"></i>
+                            <span>La division : <code>c1 / c2</code></span>
+                        </li>
+                    </ul>
+
+                    <!-- ERREUR FREQUENTE COMPONENT -->
+                    <div class="bg-pink-50 rounded-2xl p-6 border border-pink-200 flex gap-4">
+                        <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-triangle-exclamation text-pink-500 text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-pink-800 mb-2">Attention à la division !</h4>
+                            <p class="text-pink-700 text-sm">
+                                En C#, la division entière ignore le reste. Essaie <code>7 / 2</code> : tu obtiendras <strong>3</strong> et non <strong>3.5</strong> ! Pour avoir le résultat avec des décimales, il faut utiliser des variables de type <code>double</code>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NAVIGATION TP -->
+        <section id="tp-navigation" class="py-16">
+            <div class="max-w-[1000px] mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <a href="tp2.html" class="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-700 px-8 py-4 rounded-full font-bold text-lg transition-all shadow-sm border border-gray-200 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    TP Précédent (Le texte)
+                </a>
+                
+                <a href="tp4.html" class="w-full sm:w-auto bg-brand-darkPurple hover:bg-brand-purple text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-btn flex items-center justify-center gap-3 transform hover:-translate-y-1">
+                    Passer au TP 4 (Les boucles)
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="bg-white pt-16 pb-8 border-t border-gray-100">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-brand-darkPurple rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-code text-white text-sm"></i>
+                    </div>
+                    <span class="font-display font-bold text-xl text-gray-900">code-and<span class="text-brand-purple">.fun</span></span>
+                </div>
+
+                <div class="flex gap-4">
+                    <a href="https://discord.gg/qspWQHADgk" class="w-10 h-10 rounded-full bg-[#5865F2]/10 text-[#5865F2] flex items-center justify-center hover:bg-[#5865F2] hover:text-white transition-all">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="mailto:hello@code-and.fun" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-brand-purple hover:text-white transition-all">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center text-gray-400 text-sm font-medium pt-8 border-t border-gray-100">
+                &copy; 2026 code-and.fun. Fait avec <i class="fa-solid fa-heart text-brand-pink mx-1"></i> pour les enfants.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm');
+                header.classList.replace('bg-white/90', 'bg-white/98');
+            } else {
+                header.classList.remove('shadow-sm');
+                header.classList.replace('bg-white/98', 'bg-white/90');
+            }
+        });
+    </script>
+</body>
+</html>

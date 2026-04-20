@@ -1,0 +1,656 @@
+﻿<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 4 : Les boucles do/while/for | code-and.fun</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        display: ['Fredoka', 'sans-serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            purple: '#A78BFA',
+                            darkPurple: '#7C3AED',
+                            yellow: '#FBBF24',
+                            pink: '#F472B6',
+                            green: '#34D399',
+                            blue: '#60A5FA',
+                            bg: '#FDFCFB'
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(124, 58, 237, 0.1)',
+                        'card': '0 20px 40px -15px rgba(0,0,0,0.05)',
+                        'btn': '0 8px 20px -6px rgba(124, 58, 237, 0.3)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { margin: 0; padding: 0; background-color: #FDFCFB; }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .scribble-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .scribble-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0,10 Q25,20 50,10 T100,10' fill='none' stroke='%23A78BFA' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            z-index: -1;
+        }
+        .scribble-yellow::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0,15 Q25,5 50,15 T100,15' fill='none' stroke='%23FBBF24' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+        }
+        
+        .step-line {
+            position: absolute;
+            left: 1.25rem;
+            top: 2.5rem;
+            bottom: -1rem;
+            width: 2px;
+            background-color: #A78BFA;
+            z-index: 0;
+        }
+        .step-line-dashed {
+            position: absolute;
+            left: 1.25rem;
+            top: 2.5rem;
+            bottom: -1rem;
+            width: 2px;
+            background-image: linear-gradient(to bottom, #A78BFA 50%, transparent 50%);
+            background-size: 2px 8px;
+            background-repeat: repeat-y;
+            z-index: 0;
+        }
+        .step-circle {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 9999px;
+            background-color: #7C3AED;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(124, 58, 237, 0.2);
+        }
+        
+        .code-block {
+            background-color: #0f172a; /* Slate 900 */
+            color: #D4D4D4;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace';
+            font-size: 0.9rem;
+            line-height: 1.5;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            position: relative;
+        }
+        
+        .code-block .keyword { color: #569CD6; }
+        .code-block .string { color: #CE9178; }
+        .code-block .comment { color: #6A9955; }
+        .code-block .function { color: #DCDCAA; }
+        .code-block .number { color: #B5CEA8; }
+        .code-block .operator { color: #D4D4D4; }
+        .code-block .type { color: #4EC9B0; }
+        
+        /* Custom details/summary for corrigés */
+        details.corrige-details > summary {
+            list-style: none;
+        }
+        details.corrige-details > summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        /* Tableau de vérité */
+        .truth-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid #E5E7EB;
+        }
+        .truth-table th {
+            background-color: #F9FAFB;
+            padding: 1rem;
+            font-weight: 700;
+            text-align: center;
+            border-bottom: 1px solid #E5E7EB;
+            color: #374151;
+        }
+        .truth-table td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #F3F4F6;
+            color: #4B5563;
+        }
+        .truth-table tr:last-child td {
+            border-bottom: none;
+        }
+        .badge-true {
+            background-color: #DEF7EC;
+            color: #03543F;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            display: inline-block;
+        }
+        .badge-false {
+            background-color: #FDE8E8;
+            color: #9B1C1C;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            display: inline-block;
+        }
+        
+        /* Callout Récap */
+        .callout-recap {
+            border-left: 4px solid #7C3AED;
+            background-color: #F5F3FF;
+            padding: 1.5rem;
+            border-radius: 0 1rem 1rem 0;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased overflow-x-hidden selection:bg-brand-purple selection:text-white m-0 p-0">
+
+    <!-- HEADER -->
+    <header id="header" class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 bg-brand-darkPurple rounded-2xl flex items-center justify-center transform group-hover:rotate-12 transition-transform shadow-btn">
+                    <i class="fa-solid fa-code text-white text-xl"></i>
+                </div>
+                <span class="font-display font-bold text-2xl tracking-tight text-gray-900">code-and<span class="text-brand-purple">.fun</span></span>
+            </a>
+
+            <nav class="hidden xl:flex items-center gap-2 bg-gray-50/80 p-1.5 rounded-full border border-gray-100">
+                <a href="index.html" class="px-5 py-2.5 rounded-full text-sm font-semibold text-gray-600 hover:text-brand-darkPurple hover:bg-white transition-all">Accueil</a>
+                <a href="how-it-works-p1.html" class="px-5 py-2.5 rounded-full text-sm font-semibold text-gray-600 hover:text-brand-darkPurple hover:bg-white transition-all">Découverte</a>
+                <a href="how-it-works-p2.html" class="px-5 py-2.5 rounded-full text-sm font-semibold text-gray-600 hover:text-brand-darkPurple hover:bg-white transition-all">Comment ça marche</a>
+                <a href="lang.html" class="px-5 py-2.5 rounded-full text-sm font-semibold text-gray-600 hover:text-brand-darkPurple hover:bg-white transition-all">Les langages</a>
+                <a href="tools.html" class="px-5 py-2.5 rounded-full text-sm font-semibold text-gray-600 hover:text-brand-darkPurple hover:bg-white transition-all">Les outils</a>
+                
+                <div class="relative group px-5 py-2.5 bg-white shadow-sm ring-1 ring-gray-900/5 rounded-full">
+                    <span class="text-sm font-bold text-brand-darkPurple cursor-pointer flex items-center gap-2">Les TPs <i class="fa-solid fa-chevron-down text-xs"></i></span>
+                    <div class="absolute top-full right-0 mt-2 w-48 bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform translate-y-2 group-hover:translate-y-0">
+                        <div class="p-2 flex flex-col gap-1">
+                            <a href="tp1.html" class="px-4 py-2 text-sm font-medium text-gray-600 hover:bg-brand-purple/10 hover:text-brand-darkPurple rounded-xl transition-colors">TP 1 : Tests if/else</a>
+                            <a href="tp2.html" class="px-4 py-2 text-sm font-medium text-gray-600 hover:bg-brand-purple/10 hover:text-brand-darkPurple rounded-xl transition-colors">TP 2 : Le texte</a>
+                            <a href="tp3.html" class="px-4 py-2 text-sm font-medium text-gray-600 hover:bg-brand-purple/10 hover:text-brand-darkPurple rounded-xl transition-colors">TP 3 : Saisie Console</a>
+                            <a href="tp4.html" class="px-4 py-2 text-sm font-bold text-brand-darkPurple bg-brand-purple/10 rounded-xl transition-colors">TP 4 : Les boucles</a>
+                            <a href="tp5.html" class="px-4 py-2 text-sm font-medium text-gray-600 hover:bg-brand-purple/10 hover:text-brand-darkPurple rounded-xl transition-colors">TP 5 : Booléens</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="tp5.html" class="bg-brand-darkPurple hover:bg-brand-purple text-white px-6 py-3 rounded-full font-bold text-sm transition-all shadow-btn flex items-center gap-2 transform hover:-translate-y-0.5">
+                    TP Suivant
+                    <i class="fa-solid fa-arrow-right text-xs bg-white/20 p-1.5 rounded-full"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-20 bg-brand-bg">
+
+        <!-- TP HEADER -->
+        <section id="tp-header" class="py-16 md:py-24 relative overflow-hidden">
+            <div class="max-w-[1000px] mx-auto px-6 lg:px-12 relative z-10">
+                <div class="text-center mb-16">
+                    <div class="inline-flex items-center gap-2 bg-brand-purple/10 text-brand-darkPurple px-4 py-2 rounded-full text-sm font-bold tracking-wider uppercase mb-6">
+                        <i class="fa-solid fa-flask"></i> TP Numéro 4
+                    </div>
+                    <h1 class="font-display text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                        Les <span class="text-brand-purple scribble-underline">Boucles</span> (do/while/for)
+                    </h1>
+                    <p class="text-xl text-gray-600 font-medium max-w-2xl mx-auto">
+                        Comment répéter des instructions sans les réécrire ? Découvre la puissance de la répétition !
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-[24px] p-8 shadow-card border border-brand-purple/20 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-purple/5 rounded-bl-full -mr-4 -mt-4"></div>
+                        <h3 class="font-display text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3 relative z-10">
+                            <i class="fa-solid fa-bullseye text-brand-purple text-3xl"></i> Objectifs du TP
+                        </h3>
+                        <ul class="space-y-4 text-gray-600 relative z-10">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-green mt-1"></i>
+                                <span>Comprendre le principe d'une boucle.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-green mt-1"></i>
+                                <span>Utiliser <code>while</code> et <code>do...while</code>.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-green mt-1"></i>
+                                <span>Maîtriser la boucle <code>for</code>.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-[24px] p-8 shadow-card border border-brand-yellow/20 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-yellow/5 rounded-bl-full -mr-4 -mt-4"></div>
+                        <h3 class="font-display text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3 relative z-10">
+                            <i class="fa-solid fa-clipboard-list text-brand-yellow text-3xl"></i> Prérequis
+                        </h3>
+                        <ul class="space-y-4 text-gray-600 relative z-10">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-arrow-right text-brand-yellow mt-1"></i>
+                                <span>Avoir fait le TP 1 (Les tests if/else).</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-arrow-right text-brand-yellow mt-1"></i>
+                                <span>Savoir utiliser <code>Console.ReadLine()</code> (TP 3).</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRODUCTION BOUCLES -->
+        <section id="intro-boucles" class="py-16 bg-white border-y border-gray-100">
+            <div class="max-w-[1000px] mx-auto px-6 lg:px-12">
+                <div class="mb-12 text-center">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        C'est quoi une boucle ?
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                        Imagine que tu doives écrire "Bonjour" 100 fois. Tu ne vas pas copier-coller 100 lignes de code !
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-[32px] p-8 md:p-12 border border-gray-100 mb-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl shadow-sm border border-gray-200">
+                            🔁
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-gray-900">Le concept</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        Une boucle permet à l'ordinateur de répéter un bloc d'instructions <strong>tant qu'une condition est vraie</strong>.
+                    </p>
+                    
+                    <div class="flex justify-center mb-8">
+                        <svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="100" y="20" width="200" height="40" rx="20" fill="#7C3AED" />
+                            <text x="200" y="45" fill="white" font-family="Nunito" font-weight="bold" font-size="16" text-anchor="middle">Condition vraie ?</text>
+                            
+                            <path d="M200 60 L200 100" stroke="#A78BFA" stroke-width="4" />
+                            <polygon points="195,95 205,95 200,105" fill="#A78BFA" />
+                            
+                            <rect x="100" y="100" width="200" height="60" rx="10" fill="#FBBF24" />
+                            <text x="200" y="135" fill="#7C3AED" font-family="Nunito" font-weight="bold" font-size="16" text-anchor="middle">Exécuter le code</text>
+                            
+                            <path d="M100 130 C 50 130, 50 40, 100 40" stroke="#7C3AED" stroke-width="4" fill="none" />
+                            <polygon points="95,35 105,45 95,45" fill="#7C3AED" transform="rotate(90 100 40)" />
+                            
+                            <text x="35" y="90" fill="#7C3AED" font-family="Nunito" font-weight="bold" font-size="14">Boucle</text>
+                            
+                            <path d="M300 40 L350 40" stroke="#A78BFA" stroke-width="4" />
+                            <polygon points="345,35 355,40 345,45" fill="#A78BFA" />
+                            <text x="325" y="30" fill="#A78BFA" font-family="Nunito" font-weight="bold" font-size="14">Faux</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHILE ET DO WHILE -->
+        <section id="while-do-while" class="py-16 bg-brand-bg">
+            <div class="max-w-[1000px] mx-auto px-6 lg:px-12">
+                <div class="mb-12 text-center">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        <code>while</code> et <code>do...while</code>
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                        Les boucles idéales quand on ne sait pas à l'avance combien de fois on va répéter.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <!-- WHILE -->
+                    <div class="bg-white rounded-[24px] p-8 shadow-card border border-gray-100">
+                        <h3 class="font-display text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <span class="text-brand-blue font-mono">while</span> (Tant que)
+                        </h3>
+                        <p class="text-gray-600 mb-6">Vérifie la condition <strong>avant</strong> d'entrer dans la boucle.</p>
+                        
+                        <pre class="code-block shadow-sm"><span class="keyword">int</span> compteur = <span class="number">0</span>;
+
+<span class="keyword">while</span> (compteur &lt; <span class="number">3</span>)
+{
+    Console.<span class="function">WriteLine</span>(<span class="string">"Tour "</span> + compteur);
+    compteur++; <span class="comment">// Ajoute 1</span>
+}</pre>
+                    </div>
+
+                    <!-- DO WHILE -->
+                    <div class="bg-white rounded-[24px] p-8 shadow-card border border-gray-100">
+                        <h3 class="font-display text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <span class="text-brand-purple font-mono">do...while</span> (Faire...Tant que)
+                        </h3>
+                        <p class="text-gray-600 mb-6">Exécute le code <strong>au moins une fois</strong>, puis vérifie la condition.</p>
+                        
+                        <pre class="code-block shadow-sm"><span class="keyword">string</span> motDePasse;
+
+<span class="keyword">do</span>
+{
+    Console.<span class="function">WriteLine</span>(<span class="string">"Mot de passe ?"</span>);
+    motDePasse = Console.<span class="function">ReadLine</span>();
+} 
+<span class="keyword">while</span> (motDePasse != <span class="string">"secret"</span>);</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LA BOUCLE FOR -->
+        <section id="boucle-for" class="py-16 bg-white border-y border-gray-100">
+            <div class="max-w-[1000px] mx-auto px-6 lg:px-12">
+                <div class="mb-12 text-center">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        La boucle <code>for</code>
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                        La boucle la plus utilisée quand on sait exactement combien de fois on veut répéter.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-[32px] p-8 md:p-12 border border-gray-100">
+                    <p class="text-gray-600 mb-6 text-lg">
+                        Elle rassemble tout sur une seule ligne : le point de départ, la condition, et l'incrémentation (ajouter 1).
+                    </p>
+                    
+                    <pre class="code-block shadow-sm mb-6"><span class="comment">// Pour i allant de 1 à 10 (inclus)</span>
+<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; i++)
+{
+    Console.<span class="function">WriteLine</span>(<span class="string">"Valeur : "</span> + i);
+}</pre>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mt-8">
+                        <div class="bg-white p-4 rounded-xl border border-gray-200">
+                            <span class="font-mono text-brand-purple font-bold">int i = 1</span>
+                            <p class="text-sm text-gray-500 mt-2">Départ</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-gray-200">
+                            <span class="font-mono text-brand-blue font-bold">i <= 10</span>
+                            <p class="text-sm text-gray-500 mt-2">Condition</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-gray-200">
+                            <span class="font-mono text-brand-green font-bold">i++</span>
+                            <p class="text-sm text-gray-500 mt-2">À chaque tour (i = i + 1)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXERCICES GUIDES -->
+        <section id="exercices" class="py-16 relative bg-brand-bg">
+            <div class="max-w-[800px] mx-auto px-6 lg:px-12">
+                <div class="mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        À toi de jouer !
+                    </h2>
+                    <p class="text-gray-600 text-lg">
+                        Pratique les boucles avec ces exercices.
+                    </p>
+                </div>
+
+                <div class="relative pl-4">
+                    <!-- Exercice 1 -->
+                    <div class="relative mb-16 pl-12">
+                        <div class="step-line-dashed"></div>
+                        <div class="step-circle absolute left-0 top-0 -ml-5">1</div>
+                        
+                        <div class="bg-white rounded-[24px] p-8 shadow-card border border-gray-100">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <div class="text-brand-green text-xs font-bold tracking-wider uppercase mb-2">NIVEAU FACILE</div>
+                                    <h3 class="font-display text-2xl font-bold text-gray-900 flex items-center gap-2">
+                                        <i class="fa-solid fa-calculator text-brand-green"></i> Compter de 1 à 20
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-green-50/50 p-5 rounded-xl border border-green-100 mb-6">
+                                <h4 class="font-bold text-brand-darkPurple mb-2">Consigne :</h4>
+                                <p class="text-gray-700">
+                                    Utilise une boucle <code>for</code> pour afficher tous les nombres de 1 à 20 dans la console.
+                                </p>
+                            </div>
+
+                            <details class="corrige-details mt-4 border border-gray-200 rounded-xl overflow-hidden group">
+                                <summary class="w-full px-6 py-4 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors font-bold text-gray-700 cursor-pointer focus:outline-none">
+                                    <span class="flex items-center gap-2"><i class="fa-solid fa-eye text-brand-purple"></i> Voir le corrigé</span>
+                                    <i class="fa-solid fa-chevron-down text-gray-400 transition-transform duration-300 group-open:rotate-180"></i>
+                                </summary>
+                                <div class="bg-white px-6 py-4 border-t border-gray-100">
+                                    <pre class="code-block"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">20</span>; i++)
+{
+    Console.<span class="function">WriteLine</span>(i);
+}</pre>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Exercice 2 -->
+                    <div class="relative pl-12 mb-16">
+                        <div class="step-line-dashed"></div>
+                        <div class="step-circle absolute left-0 top-0 -ml-5">2</div>
+                        
+                        <div class="bg-white rounded-[24px] p-8 shadow-card border border-gray-100">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <div class="text-brand-blue text-xs font-bold tracking-wider uppercase mb-2">NIVEAU MOYEN</div>
+                                    <h3 class="font-display text-2xl font-bold text-gray-900 flex items-center gap-2">
+                                        <i class="fa-solid fa-table text-brand-blue"></i> Table de multiplication
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-blue-50/50 p-5 rounded-xl border border-blue-100 mb-6">
+                                <h4 class="font-bold text-brand-darkPurple mb-2">Consigne :</h4>
+                                <p class="text-gray-700">
+                                    Demande à l'utilisateur de saisir un nombre. Ensuite, utilise une boucle pour afficher la table de multiplication (de 1 à 10) de ce nombre.
+                                </p>
+                            </div>
+
+                            <details class="corrige-details mt-4 border border-gray-200 rounded-xl overflow-hidden group">
+                                <summary class="w-full px-6 py-4 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors font-bold text-gray-700 cursor-pointer focus:outline-none">
+                                    <span class="flex items-center gap-2"><i class="fa-solid fa-eye text-brand-purple"></i> Voir le corrigé</span>
+                                    <i class="fa-solid fa-chevron-down text-gray-400 transition-transform duration-300 group-open:rotate-180"></i>
+                                </summary>
+                                <div class="bg-white px-6 py-4 border-t border-gray-100">
+                                    <pre class="code-block">Console.<span class="function">WriteLine</span>(<span class="string">"Entrez un nombre :"</span>);
+<span class="keyword">int</span> nombre = <span class="keyword">int</span>.<span class="function">Parse</span>(Console.<span class="function">ReadLine</span>());
+
+<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; i++)
+{
+    Console.<span class="function">WriteLine</span>(nombre + <span class="string">" x "</span> + i + <span class="string">" = "</span> + (nombre * i));
+}</pre>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- DEFI BONUS -->
+                    <div class="relative pl-12">
+                        <div class="step-circle absolute left-0 top-0 -ml-5 bg-brand-yellow">
+                            <i class="fa-solid fa-star text-white"></i>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-brand-yellow/10 to-brand-yellow/5 rounded-[24px] p-8 shadow-card border-2 border-brand-yellow/50">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <div class="text-brand-yellow text-xs font-bold tracking-wider uppercase mb-2">DÉFI BONUS</div>
+                                    <h3 class="font-display text-2xl font-bold text-gray-900 flex items-center gap-2">
+                                        <i class="fa-solid fa-trophy text-brand-yellow"></i> Le juste prix
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white/80 p-5 rounded-xl border border-brand-yellow/30 mb-6">
+                                <h4 class="font-bold text-brand-darkPurple mb-2">Consigne :</h4>
+                                <p class="text-gray-700">
+                                    L'ordinateur a un nombre mystère (par exemple 42). Demande à l'utilisateur de deviner ce nombre. Tant qu'il n'a pas trouvé, dis-lui "C'est plus !" ou "C'est moins !". S'il trouve, affiche "Bravo !". Utilise une boucle <code>do...while</code> ou <code>while</code>.
+                                </p>
+                            </div>
+
+                            <details class="corrige-details mt-4 border border-brand-yellow/30 rounded-xl overflow-hidden group bg-white">
+                                <summary class="w-full px-6 py-4 flex items-center justify-between hover:bg-brand-yellow/5 transition-colors font-bold text-gray-700 cursor-pointer focus:outline-none">
+                                    <span class="flex items-center gap-2"><i class="fa-solid fa-eye text-brand-yellow"></i> Voir la solution bonus</span>
+                                    <i class="fa-solid fa-chevron-down text-gray-400 transition-transform duration-300 group-open:rotate-180"></i>
+                                </summary>
+                                <div class="bg-white px-6 py-4 border-t border-brand-yellow/20">
+                                    <pre class="code-block"><span class="keyword">int</span> nombreMystere = <span class="number">42</span>;
+<span class="keyword">int</span> essai;
+
+<span class="keyword">do</span>
+{
+    Console.<span class="function">WriteLine</span>(<span class="string">"Devinez le nombre :"</span>);
+    essai = <span class="keyword">int</span>.<span class="function">Parse</span>(Console.<span class="function">ReadLine</span>());
+
+    <span class="keyword">if</span> (essai &lt; nombreMystere)
+    {
+        Console.<span class="function">WriteLine</span>(<span class="string">"C'est plus !"</span>);
+    }
+    <span class="keyword">else if</span> (essai &gt; nombreMystere)
+    {
+        Console.<span class="function">WriteLine</span>(<span class="string">"C'est moins !"</span>);
+    }
+
+} <span class="keyword">while</span> (essai != nombreMystere);
+
+Console.<span class="function">WriteLine</span>(<span class="string">"Bravo ! Vous avez trouvé."</span>);</pre>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECAPITULATIF -->
+        <section id="recapitulatif" class="py-16 bg-white border-y border-gray-100">
+            <div class="max-w-[800px] mx-auto px-6 lg:px-12">
+                <div class="callout-recap shadow-sm">
+                    <h3 class="font-display text-2xl font-bold text-brand-darkPurple mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-lightbulb"></i> Récapitulatif
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><i class="fa-solid fa-angle-right text-brand-purple mr-2"></i> <strong>Boucle :</strong> Répète un bloc de code tant qu'une condition est vraie.</li>
+                        <li><i class="fa-solid fa-angle-right text-brand-purple mr-2"></i> <code>while</code> : Vérifie la condition avant d'exécuter.</li>
+                        <li><i class="fa-solid fa-angle-right text-brand-purple mr-2"></i> <code>do...while</code> : Exécute au moins une fois, puis vérifie la condition.</li>
+                        <li><i class="fa-solid fa-angle-right text-brand-purple mr-2"></i> <code>for</code> : Idéal quand on connaît le nombre exact de répétitions.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- NAVIGATION TP -->
+        <section id="tp-navigation" class="py-16 bg-brand-bg">
+            <div class="max-w-[1000px] mx-auto px-6 lg:px-12">
+                <div class="text-center mb-10">
+                    <h2 class="font-display text-3xl font-bold text-gray-900 mb-4">Et ensuite ?</h2>
+                    <p class="text-gray-600 text-lg">Tu sais maintenant faire répéter des actions à l'ordinateur. Continuons l'aventure !</p>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <a href="tp3.html" class="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-700 px-8 py-4 rounded-full font-bold text-lg transition-all shadow-sm border border-gray-200 flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        TP Précédent (Saisie Console)
+                    </a>
+                    
+                    <a href="tp5.html" class="w-full sm:w-auto bg-brand-darkPurple hover:bg-brand-purple text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-btn flex items-center justify-center gap-3 transform hover:-translate-y-1">
+                        Passer au TP 5 (Les Booléens)
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="bg-white pt-16 pb-8 border-t border-gray-100">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-brand-darkPurple rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-code text-white text-sm"></i>
+                    </div>
+                    <span class="font-display font-bold text-xl text-gray-900">code-and<span class="text-brand-purple">.fun</span></span>
+                </div>
+
+                <div class="flex gap-4">
+                    <a href="https://discord.gg/qspWQHADgk" class="w-10 h-10 rounded-full bg-[#5865F2]/10 text-[#5865F2] flex items-center justify-center hover:bg-[#5865F2] hover:text-white transition-all">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="mailto:hello@code-and.fun" class="w-10 h-10 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-brand-purple hover:text-white transition-all">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center text-gray-400 text-sm font-medium pt-8 border-t border-gray-100">
+                &copy; 2026 code-and.fun. Fait avec <i class="fa-solid fa-heart text-brand-pink mx-1"></i> pour les enfants.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm');
+                header.classList.replace('bg-white/90', 'bg-white/98');
+            } else {
+                header.classList.remove('shadow-sm');
+                header.classList.replace('bg-white/98', 'bg-white/90');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,12 +1,10 @@
 
 ![Dayflow - Sitting](https://user-images.githubusercontent.com/107787061/174484634-84d395b6-d62f-443c-b2b6-f5c903f3b545.png)
-## Cous programmation gratuit
+## Cours programmation gratuit
 
 Un espace pour débutant ou pour ceux qui veulent progresser dans le code informatique.
 
 Totalement gratuit.
-
-L'adresse [cours-programmation-gratuit.fr](https://cours-programmation-gratuit.fr) arrive ici.
 
 ## Présentation
 
@@ -26,21 +24,18 @@ Avance avec des exercices adaptés à ton niveau.
 ## Le programme
 Rapidement tu vas apprendre les bases de la programmation informatique, la mémoire, les variables, les calculs, les chaînes de caractères, les tests, les boucles...
 
+Mais surtout tu vas savoir comment fonctionne un ordinateur. il est très important de comprendre se qui se passe et de faire le lien entre logiciel et matériel.
+
 Un bon complément à Scratch et découvrir le code informatique comme étudié après le bac mais surtout pour bien comprendre comment fonctionne un ordinateur et avoir de bonnes bases en algorithmie.
 
 ## De quoi as-tu besoin ?
-D’un ordinateur, cela peut être celui de tes parents. Nous n’allons rien installer dessus.
-
-- D’une adresse mail à toi, si tu n’en possèdes pas nous t’en créons une.
-- D’un compte Replit (nous verrons ensemble le moment venu)
-- D’un compte Discord.
-
+D’un ordinateur, mais cela tu l'avais compris.
 Nous utiliserons des outils en anglais mais cela restera de l’anglais simple, une occasion d’enrichir ton vocabulaire.
 
-## Les qualités d’un développeur
+## A quoi t'attendre ?
 
-- Aimer faire travailler son esprit logique
-- Utiliser sa curiosité pour persévérer car tu seras forcément bloqué à un moment.
+- Il faudra faire travailler ton esprit logique
+- Utiliser ta curiosité pour persévérer car tu seras forcément bloqué à un moment.
 - Comme l’ordinateur est fort en calculs nous ferons parfois un peu de maths (calculer des moyennes, des pourcentages), mais cela restera simple.
 
 ## Es-tu prêt à commencer ?
@@ -50,8 +45,6 @@ Je vais te donner des exercices à faire sous forme de TP (travaux pratiques).
 N'hésite pas à tester, modifier, essayer, c'est comme cela que tu vas bien tout comprendre et apprendre.
 
 N'avance pas trop vite, fais un TP par jour par exemple. Si tu as eu des difficultés reviens sur le TP de la veille. Si un TP n'est pas bien compris tu vas avoir des difficultés par la suite.
-
-Surtout contacte-moi si tu ne comprends pas (voir étape 4).
 
 ## [Tout commence ici](Intro/01_Decouverte.md)
 
