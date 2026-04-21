@@ -426,6 +426,45 @@
           </div>
         </div>
       </section><!-- CTA SECTION -->
+      
+      <section id="dotnet-new-guide" class="py-16 bg-white border-y border-gray-100 relative">
+        <div class="max-w-[900px] mx-auto px-6 lg:px-12">
+          <div class="mb-8">
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">Créer un nouveau projet .NET</h2>
+            <p class="text-gray-600 text-lg">Petite marche à suivre pour débuter rapidement avec un projet console en C# depuis VS Code.</p>
+          </div>
+          <div class="bg-white rounded-[24px] p-8 shadow-card border border-gray-100">
+            <ol class="list-decimal list-inside space-y-4 text-gray-700">
+              <li>
+                <strong>Ouvre VS Code</strong> et <strong>ouvre le dossier</strong> où tu veux créer le projet.
+              </li>
+              <li>
+                <strong>Ouvre le terminal intégré</strong> (Menu Terminal puis "New Terminal").
+              </li>
+              <li>
+                <strong>Créer le projet</strong> : tape <code>dotnet new console -n MonProjet</code>.
+                <div class="text-sm text-gray-600 mt-1">Cette commande crée un nouveau projet console. L'option <code>-n MonProjet</code> définit le nom du dossier/projet.</div>
+              </li>
+              <li>
+                <strong>Entrez dans le dossier</strong> : <code>cd MonProjet</code>.
+              </li>
+              <li>
+                <strong>Exécuter le projet</strong> : <code>dotnet run</code>.
+                <div class="text-sm text-gray-600 mt-1">Cette commande compile puis lance l'application dans le terminal.</div>
+              </li>
+            </ol>
+            <div class="mt-6 text-gray-700">
+              <h4 class="font-bold mb-2">Résumé rapide des commandes</h4>
+              <ul class="list-disc list-inside text-sm">
+                <li><code>dotnet new &lt;template&gt</code> : crée un projet à partir d'un modèle (ex. <code>console</code>, <code>web</code>, ...).</li>
+                <li><code>dotnet run</code> : compile et exécute le projet courant.</li>
+                <li><code>dotnet build</code> : compile sans exécuter.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="cta-tp1"
         class="py-24 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-purple/10 via-brand-bg to-brand-bg relative z-20 border-t border-gray-100">
         <div class="max-w-[800px] mx-auto px-6 lg:px-12 text-center">
